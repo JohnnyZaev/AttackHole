@@ -8,12 +8,12 @@ public class LayerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ChangeLayer(other, masks[Default]);
+        ChangeLayer(other, masks[IgnoreCollision]);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        ChangeLayer(other, masks[IgnoreCollision]);
+        ChangeLayer(other, masks[Default]);
     }
 
     private void ChangeLayer(Collider col, string layer)
